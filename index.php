@@ -14,32 +14,37 @@
     <div class="header">
       <h1>To Do List</h1>
     </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Read You Don't Know JavaScript - Book 3</p>
-    </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Study algorithms</p>
-    </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Listen to Code Newbie podcast</p>
-    </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Check job postings</p>
-    </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Write Medium article</p>
-    </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Do research - Jest testing</p>
-    </div>
+    <ul class="items">
+      <li>
+        <span class="item">Read You Don't Know JavaScript - Book 3</span>
+        <a href="#" class="done-btn">Mark as done</a>
+      </li>
+      <li><span class="item done">Study algorithms</span></li>
+      <li><span class="item"></span>Listen to Code Newbie podcast</li>
+      <li><span class="item">Check job postings</span></li>
+      <li><span class="item">Write Medium article</span></li>
+      <li><span class="item">Do research - Jest testing</span></li>
+    </ul>
+
+    <form class="item-add" action="add.php" method="post">
+			<input type="text" class="input" name="name" placeholder="Type a new item here." autocomplete="off" required>
+			<input type="submit" value="Add" class="submit-btn">
+		</form>
   </section>
 
+  <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyD1WAux9rYcAmOOPEnH2PklZuvn88Y8TQY",
+      authDomain: "todo-list-919bc.firebaseapp.com",
+      databaseURL: "https://todo-list-919bc.firebaseio.com",
+      projectId: "todo-list-919bc",
+      storageBucket: "",
+      messagingSenderId: "164381019654"
+    };
+    firebase.initializeApp(config);
+  </script>
 
   <?php
   ?>
