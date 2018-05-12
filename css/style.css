@@ -1,0 +1,50 @@
+body {
+  @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700");
+  font-family: "PT Sans", sans-serif;
+  background: rgba(255, 220, 209, 1);
+  background: -moz-linear-gradient(
+    to rgba(255, 220, 209, 1) 0%,
+    rgba(230, 161, 143, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    left bottom,
+    color-stop(0%, rgba(255, 220, 209, 1)),
+    color-stop(100%, rgba(230, 161, 143, 1))
+  );
+}
+
+.list {
+  min-width: 320px;
+  max-width: 500px;
+  margin: 50px auto;
+  border-radius: 5px;
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1e1;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+}
+
+input:checked + p {
+  background: #f9f9f9;
+  text-decoration: line-through;
+}
+
+.header {
+  background: #c8e2de;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 2em;
+}
